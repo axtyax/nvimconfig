@@ -33,7 +33,12 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 
 " Interface
-Plug 'scrooloose/nerdtree'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Interface
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+>>>>>>> 8deb715 (new files)
 Plug 'majutsushi/tagbar'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/fzf'
@@ -69,6 +74,7 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-l> <C-W><C-l>
 
 autocmd BufReadPost,FileReadPost * :TagbarOpen
+<<<<<<< HEAD
 autocmd BufReadPost,FileReadPost * :NERDTreeFocus
 
 """ Aesthetics
@@ -79,6 +85,18 @@ let mapleader='\'
 nmap <leader>1 :NERDTreeToggle<CR>
 nmap <leader>2 :TagbarToggle<CR>
 
+=======
+
+""" Aesthetics
+autocmd VimEnter * :colorscheme contrastneed
+
+""" Tools
+let mapleader='\'
+nmap <leader>1 :Telescope<CR>
+nmap <leader>2 :TagbarToggle<CR>
+
+nmap <leader>f :Telescope find_files<CR>
+nmap <leader>g :Telescope grep_string<CR>
 nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
