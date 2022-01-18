@@ -15,7 +15,6 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bryanmylee/vim-colorscheme-icons'
-Plug 'ryanoasis/nerd-fonts'
 
 " Aethetics - Additional
 Plug 'nightsense/nemo'
@@ -31,14 +30,16 @@ Plug 'tpope/vim-sensible'
 Plug 'sickill/vim-pasta'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Interface
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Interface
+Plug 'mcchrish/nnn.vim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
->>>>>>> 8deb715 (new files)
 Plug 'majutsushi/tagbar'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/fzf'
@@ -55,7 +56,7 @@ set list listchars=trail:»,tab:»-
 set fillchars+=vert:\ 
 set wrap breakindent
 set encoding=utf-8
-set textwidth=4
+" set textwidth=4
 set hidden
 set number
 set title
@@ -74,21 +75,9 @@ nnoremap <C-h> <C-W><C-h>
 nnoremap <C-l> <C-W><C-l>
 
 autocmd BufReadPost,FileReadPost * :TagbarOpen
-<<<<<<< HEAD
-autocmd BufReadPost,FileReadPost * :NERDTreeFocus
 
 """ Aesthetics
-autocmd VimEnter * :colorscheme moriarty
-
-""" Tools
-let mapleader='\'
-nmap <leader>1 :NERDTreeToggle<CR>
-nmap <leader>2 :TagbarToggle<CR>
-
-=======
-
-""" Aesthetics
-autocmd VimEnter * :colorscheme contrastneed
+autocmd VimEnter * :colorscheme spring-night
 
 """ Tools
 let mapleader='\'
@@ -96,14 +85,12 @@ nmap <leader>1 :Telescope<CR>
 nmap <leader>2 :TagbarToggle<CR>
 
 nmap <leader>f :Telescope find_files<CR>
+nmap <leader>e :NnnPicker<CR>
 nmap <leader>g :Telescope grep_string<CR>
 nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
-nmap <leader>f :FZF<CR>
-"nmap <leader>z :Rg<CR>
-"nmap <leader>x :Files<CR>
-
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
+
