@@ -34,10 +34,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " Interface
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-" Interface
 Plug 'mcchrish/nnn.vim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'majutsushi/tagbar'
@@ -64,12 +60,16 @@ set title
 """ Custom Mappings
 
 """ Editor Navigation
-nmap <C-q> :tabclose<CR>
-nmap <S-q> :q<CR>
+""" nmap <C-q> :tabclose<CR>
+nmap <C-q> :q<CR>
 nmap <C-s> :w<CR>
 
 nmap <C-d> :tabnext<CR>
 nmap <C-a> :tabprev<CR>
+
+nmap <C-n> :tabnew <CR>
+nmap <C-b> :tabmove -<CR>
+nmap <C-m> :tabmove +<CR>
 
 nnoremap <C-h> <C-W><C-h>
 nnoremap <C-l> <C-W><C-l>
@@ -86,7 +86,7 @@ nmap <leader>2 :TagbarToggle<CR>
 
 nmap <leader>f :Telescope find_files<CR>
 nmap <leader>e :NnnPicker<CR>
-nmap <leader>g :Telescope grep_string<CR>
+nmap <leader>g :Telescope live_grep<CR>
 nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
