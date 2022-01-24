@@ -4,11 +4,13 @@
 call plug#begin()
 
 " General Syntax and Navigation
-Plug 'universal-ctags/ctags'
-Plug 'sheerun/vim-polyglot'
-Plug 'ycm-core/ycmd'
-Plug 'ycm-core/youcompleteme'
-Plug 'morhetz/gruvbox'
+Plug 'valloric/youcompleteme'
+
+" Language specific highlighting
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'fatih/vim-go'
+Plug 'wting/rust.vim'
+Plug 'vim-python/python-syntax'
 
 " Aesthetics - Colors
 Plug 'flazz/vim-colorschemes'
@@ -91,6 +93,7 @@ nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
 nmap <silent> <leader><leader> :noh<CR>
-nmap <Tab> :bnext<CR>
-nmap <S-Tab> :bprevious<CR>
 
+""" nmap <Tab> :bnext<CR>
+""" nmap <S-Tab> :  bprevious<CR>
+map <Tab> <C-W>w
