@@ -6,11 +6,12 @@ call plug#begin()
 " General Syntax and Navigation
 Plug 'valloric/youcompleteme'
 
-" Language specific highlighting
+" Language specifics tools
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'fatih/vim-go'
 Plug 'wting/rust.vim'
 Plug 'vim-python/python-syntax'
+Plug 'wlangstroth/vim-racket'
 
 " Aesthetics - Colors
 Plug 'flazz/vim-colorschemes'
