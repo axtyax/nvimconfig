@@ -35,6 +35,8 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kannokanno/previm'
+Plug 'plasticboy/vim-markdown'
 
 " Interface
 Plug 'mcchrish/nnn.vim'
@@ -86,7 +88,7 @@ autocmd VimEnter * :colorscheme spring-night
 let mapleader='\'
 nmap <leader>1 :Telescope<CR>
 nmap <leader>2 :TagbarToggle<CR>
-
+nmap <leader>3 :PrevimOpen<CR>
 nmap <leader>f :Telescope find_files<CR>
 nmap <leader>e :NnnPicker<CR>
 nmap <leader>g :Telescope live_grep<CR>
@@ -94,6 +96,8 @@ nnoremap <silent> <leader>t :FloatermToggle<CR>
 tnoremap <silent> <leader>t <C-\><C-n>:FloatermToggle<CR>
 
 nmap <silent> <leader><leader> :noh<CR>
+
+let g:previm_open_cmd = 'google-chrome-stable'
 
 """ nmap <Tab> :bnext<CR>
 """ nmap <S-Tab> :  bprevious<CR>
