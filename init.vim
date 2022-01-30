@@ -61,6 +61,7 @@ set encoding=utf-8
 set hidden
 set number
 set title
+set cursorline
 
 """ Custom Mappings
 
